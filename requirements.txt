@@ -1,4 +1,4 @@
-setuptools>=65.5.1
+setuptools>=75.6.0
 setuptools-distutils
 matplotlib==3.8.0
 numpy==1.25.2
