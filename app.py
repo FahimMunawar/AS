@@ -55,4 +55,4 @@ if uploaded_file is not None:
 
     st.markdown(classify_images(uploaded_file))
 
-st.balloons()
+st.snow()
