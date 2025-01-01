@@ -5,10 +5,36 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #f0f2f6; /* Light blue-gray */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.header('Ankylosing Spondylitis Classification CNN Model')
 flower_names = ['Axial_AS', 'Axial_HC']
 
-model = load_model('seq_axial.h5')
+# model = load_model('seq_axial.h5')
+
+option = st.selectbox(
+    "What kind of image would you like to classify?",
+    ("Axial", "Coronal", "Contrast"),
+    index=None,
+    placeholder="Select Classifying method...",
+)
+
+# Load the appropriate model based on user selection
+if option == "Axial":
+    model = load_model('seq_axial.h5')
+elif option == "Coronal":
+    model = load_model('seq_coronal.h5')
+elif option == "Contrast":
+    model = load_model('seq_contrast.h5')
 
 def classify_images(image_path):
     input_image = tf.keras.utils.load_img(image_path, target_size=(180,180))
@@ -29,3 +55,4 @@ if uploaded_file is not None:
 
     st.markdown(classify_images(uploaded_file))
 
+st.balloons()
