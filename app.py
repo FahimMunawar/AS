@@ -17,7 +17,7 @@ st.markdown(
 )
 
 st.header('Ankylosing Spondylitis Classification CNN Model')
-flower_names = ['Axial_AS', 'Axial_HC']
+
 
 # model = load_model('seq_axial.h5')
 
@@ -25,16 +25,19 @@ option = st.selectbox(
     "What kind of image would you like to classify?",
     ("Axial", "Coronal", "Contrast"),
     index=None,
-    placeholder="Select Classifying method...",
+    placeholder="Select the classification method based on the type of image.",
 )
 
 # Load the appropriate model based on user selection
 if option == "Axial":
     model = load_model('seq_axial.h5')
+    class_names = ['Axial_AS', 'Axial_HC']
 elif option == "Coronal":
     model = load_model('seq_coronal.h5')
+    class_names = ['Coronal_AS', 'Coronal_HC']
 elif option == "Contrast":
     model = load_model('seq_contrast.h5')
+    class_names = ['Control_Enhanced_AS', 'Control_Enhanced_HC']
 
 def classify_images(image_path):
     input_image = tf.keras.utils.load_img(image_path, target_size=(180,180))
@@ -43,7 +46,7 @@ def classify_images(image_path):
 
     predictions = model.predict(input_image_exp_dim)
     result = tf.nn.softmax(predictions[0])
-    outcome = 'The Image belongs to ' + flower_names[np.argmax(result)] + ' with a score of '+ str(np.max(result)*100)
+    outcome = 'The Image belongs to ' + class_names[np.argmax(result)] + ' with a score of '+ str(np.max(result)*100)
     return outcome
 
 uploaded_file = st.file_uploader('Upload an Image')
