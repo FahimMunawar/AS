@@ -1,10 +1,2 @@
-setuptools>=75.6.0
-setuptools-distutils
-matplotlib==3.8.0
-numpy==1.25.2
 tensorflow==2.14.0
 Keras==2.4.3
-tensorboard==2.3.0
-tensorboard-plugin-wit==1.7.0
-tensorflow-estimator==2.3.0
-scipy==1.5.3
