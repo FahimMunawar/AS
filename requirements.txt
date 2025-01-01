@@ -1,3 +1,5 @@
+setuptools>=65.5.1
+setuptools-distutils
 matplotlib==3.8.0
 numpy==1.25.2
 tensorflow==2.14.0
