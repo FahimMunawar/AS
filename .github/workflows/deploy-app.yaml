@@ -1,0 +1,35 @@
+name: Keep Streamlit App Alive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 5 minutes
+  push:
+    branches:
+      - test # Triggers on push to the 'test' branch
+  workflow_dispatch: # Allows manual trigger if needed
+
+jobs:
+  commit_changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your GitHub Username"
+
+      - name: Make a dummy change
+        run: |
+          echo "Keeping the app alive - $(date)" >> keep_alive.txt
+          git add keep_alive.txt
+
+      - name: Commit and push changes
+        run: |
+          git commit -m "Keep Streamlit app alive - $(date)"
+          git push
+
+      - name: Clean up
+        run: |
+          rm keep_alive.txt
