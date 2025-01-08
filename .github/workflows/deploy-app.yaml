@@ -17,8 +17,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "your-email@example.com"
-          git config --global user.name "Your GitHub Username"
+          git config --global user.email "munawar.hossain@exos-systems.com"
+          git config --global user.name "Fahim Munawar"
 
       - name: Set up GitHub token for authentication
         run: |
