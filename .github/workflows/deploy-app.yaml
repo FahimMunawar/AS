@@ -31,6 +31,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git add keep_alive.txt
           git commit -m "Keep Streamlit app alive - $(date)"
           git push
 
