@@ -1,0 +1,7 @@
+name: Update Streamlit (Manual)
+
+on: [workflow_dispatch]
+
+jobs:
+  Up_Streamlit_App:
+    uses: ./.github/workflows/callable-build-and-deploy.yaml

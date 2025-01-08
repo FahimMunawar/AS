@@ -1,0 +1,9 @@
+name: Update Streamlit (Cron)
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  Up_Streamlit_App:
+    uses: ./.github/workflows/callable-build-and-deploy.yaml

@@ -1,12 +1,8 @@
 name: Keep Streamlit App Alive
 
 on:
-  schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes
-  push:
-    branches:
-      - test # Triggers on push to the 'test' branch
-  workflow_dispatch: # Allows manual trigger if needed
+  workflow_call:
+
 
 jobs:
   commit_changes:
