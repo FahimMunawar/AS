@@ -20,6 +20,10 @@ jobs:
           git config --global user.email "your-email@example.com"
           git config --global user.name "Your GitHub Username"
 
+      - name: Set up GitHub token for authentication
+        run: |
+          git remote set-url origin https://github-actions:${{ secrets.STREAMLIT_TOKEN }}@github.com/FahimMunawar/AS.git
+
       - name: Make a dummy change
         run: |
           echo "Keeping the app alive - $(date)" >> keep_alive.txt
