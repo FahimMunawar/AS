@@ -4,4 +4,4 @@ import streamlit as st
 st.title("How to Use the Ankylosing Spondylitis Classification Website")
 
 # Displaying the video
-st.video("video/demo.mp4")
+st.video("video/howto.mp4")
