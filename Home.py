@@ -167,7 +167,7 @@ def classify_images(image_path):
 
     predictions = model.predict(input_image_exp_dim)
     result = tf.nn.softmax(predictions[0])
-    outcome = 'The Image belongs to ' + class_names[np.argmax(result)] + ' with a score of '+ str(np.max(result)*100)
+    outcome = f"\n\n{'*' * 50}\nThe Image belongs to {class_names[np.argmax(result)]} with a score of {np.max(result) * 100:.2f}%\n{'*' * 50}\n\n"
     return outcome
 
 # File uploader for image
