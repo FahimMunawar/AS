@@ -6,7 +6,7 @@ st.title("Privacy Policy")
 st.markdown("""
 **Effective Date:** [Insert Date]  
 
-Thank you for using our Ankylosing Spondylitis Classification website hosted at [https://ankolusion.streamlit.app](https://ankolusion.streamlit.app).  
+Thank you for using our Ankylosing Spondylitis Classification website hosted at [https://ankylosing.streamlit.app](https://ankylosing.streamlit.app).  
 Your privacy is of utmost importance to us. This policy outlines our commitment to protecting your data and explains how we handle any interactions on our platform.  
 
 ---
@@ -49,5 +49,5 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
 
 **Email:** munawark7@gmail.com
 
-By using [https://ankolusion.streamlit.app](https://ankolusion.streamlit.app), you acknowledge and agree to the terms of this Privacy Policy.  
+By using [https://ankylosing.streamlit.app](https://ankylosing.streamlit.app), you acknowledge and agree to the terms of this Privacy Policy.  
 """)
