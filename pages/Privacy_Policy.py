@@ -4,7 +4,7 @@ import streamlit as st
 st.title("Privacy Policy")
 
 st.markdown("""
-**Effective Date:** [Insert Date]  
+**Effective Date:** 12 January 2025 
 
 Thank you for using our Ankylosing Spondylitis Classification website hosted at [https://ankylosing.streamlit.app](https://ankylosing.streamlit.app).  
 Your privacy is of utmost importance to us. This policy outlines our commitment to protecting your data and explains how we handle any interactions on our platform.  
